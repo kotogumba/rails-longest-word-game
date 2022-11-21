@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container mt-3">
   <h1> <%= @score[:message]   %></h1>
   <h3>
     <%= "Your score: #{@score[:score]}.. Time: #{@score[:time].round()} seconds." %>
   </h3>
-
+  <%= link_to "Play again", new_path, class: "link-info" %>
 </div>
