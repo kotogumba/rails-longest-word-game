@@ -28,11 +28,13 @@ class GamesController < ApplicationController
   end
 
   def score_message(attempt, grid, start_time, end_time)
+    return ["#{attempt} not an english word", 0] if attempt.size == 1
+
     if api_check(attempt)
       if correct_message(attempt.upcase, grid)
         return ["Congratulations! #{attempt} is a valid English word!", attempt.size / (end_time - start_time)]
       else
-        return ["Sorry but #{attempt} can't be built out of #{grid}", 0]
+        return ["Sorry but #{attempt}not in the grid and can't be built out of #{grid}", 0]
       end
     else
       return ["Sorry but #{attempt} does not seem to be a valid English word.", 0]

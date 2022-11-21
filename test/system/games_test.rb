@@ -20,4 +20,9 @@ class GamesTest < ApplicationSystemTestCase
     click_on "Play"
     assert_text "not an english word"
   end
+
+  test "You can fill the form with a valid  English word (that’s hard because there is randomness!), click play and get a 'Congratulations'" do
+    visit new_url
+    # 
+  end
 end
