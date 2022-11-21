@@ -1,5 +1,7 @@
 require_relative "boot"
 
+require 'open-uri'
+require 'json'
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
